@@ -14,9 +14,10 @@ import org.hibernate.annotations.GenericGenerator;
 public class Subscribe {
 
 	private String subscribeId;
+	private String userId;
 	private String hotelId;
 	private String houseId;
-	private String isUnsubscribe;//是否已退订
+	private String isUnsubscribe = "0";//是否已退订   (0:未退订的；1:已经退订的)
 	private Timestamp subscribeTime;//预订时间
 	private Timestamp unsubscribeTime;//退订时间
 
@@ -28,6 +29,12 @@ public class Subscribe {
 	}
 	public void setSubscribeId(String subscribeId) {
 		this.subscribeId = subscribeId;
+	}
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 	public String getHotelId() {
 		return hotelId;

@@ -14,6 +14,7 @@ public class User {
 	private String userId;
 	private String userTel;
 	private String userPassword;
+	private String userIntegral = "10";//默认积分为10
 	
 	@Id
 	@GenericGenerator(name="uuid", strategy="uuid")
@@ -35,5 +36,11 @@ public class User {
 	}
 	public void setUserPassword(String userPassword) {
 		this.userPassword = userPassword;
+	}
+	public String getUserIntegral() {
+		return userIntegral;
+	}
+	public void setUserIntegral(String userIntegral) {
+		this.userIntegral = userIntegral;
 	}
 }
